@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { brand } from "@/config/brand";
 
 const navItems = [
@@ -81,9 +82,15 @@ export default function Sidebar() {
       <aside className="hidden lg:flex flex-col fixed top-0 left-0 h-full w-56 bg-[#0a0a0a] border-r border-white/8 z-40">
         {/* Brand mark */}
         <div className="px-6 pt-8 pb-6 border-b border-white/8">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#5d5d5d] mb-1">Brand Codex</p>
-          <p className="font-heading text-sm text-white font-medium">{brand.name}</p>
-          <p className="text-[11px] text-[#5d5d5d] mt-1">v{brand.version} · {brand.year}</p>
+          <p className="text-[10px] tracking-[0.2em] uppercase text-[#5d5d5d] mb-3">Brand Codex</p>
+          <Image
+            src="/logos/hcm-logo-white.svg"
+            alt="Hive Creative Media"
+            width={120}
+            height={44}
+            className="mb-2"
+          />
+          <p className="text-[11px] text-[#5d5d5d]">v{brand.version} · {brand.year}</p>
         </div>
 
         {/* Navigation */}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { brand } from "@/config/brand";
 
 export default function Cover() {
@@ -39,18 +40,15 @@ export default function Cover() {
           {brand.url}
         </p>
 
-        {/* Logo placeholder */}
+        {/* Logo */}
         <div className="mb-12">
-          {/* Replace this with <Image> once logo files are added to /public/logos/ */}
-          <div className="flex items-center gap-4">
-            <div className="w-12 h-12 rounded-sm bg-[#e3f55a] flex items-center justify-center">
-              <span className="font-heading font-bold text-black text-lg">HC</span>
-            </div>
-            <div>
-              <p className="font-heading text-white text-2xl font-medium leading-tight">Hive Creative</p>
-              <p className="font-heading text-[#a8a8a8] text-2xl font-light leading-tight">Media</p>
-            </div>
-          </div>
+          <Image
+            src="/logos/hcm-logo-white.svg"
+            alt="Hive Creative Media"
+            width={240}
+            height={89}
+            priority
+          />
         </div>
 
         <h1 className="font-heading text-5xl lg:text-7xl font-light text-white leading-[1.05] max-w-2xl mb-6">
