@@ -1,28 +1,14 @@
 /* ─── Font Imports — must precede @import "tailwindcss" ────────────────────── */
 /* Satoshi Variable — via Fontshare CDN */
 @import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500&display=swap");
-
-/* Inter as heading fallback until Scale VF font files are added */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&display=swap");
+/* Scale VF — loaded via Adobe Fonts kit in layout.tsx <head> */
 
 @import "tailwindcss";
 
-/*
-  Scale VF — place font files in /public/fonts/ScaleVF/ and uncomment:
-
-  @font-face {
-    font-family: "Scale VF";
-    src: url("/fonts/ScaleVF/ScaleVF.woff2") format("woff2");
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-  }
-*/
-
 /* ─── CSS Custom Properties ─────────────────────────────────────────────────── */
 :root {
-  --font-heading: "Scale VF", "Inter", system-ui, sans-serif;
-  --font-body: "Satoshi Variable", "Inter", system-ui, sans-serif;
+  --font-heading: "scale-variable", system-ui, sans-serif;
+  --font-body: "Satoshi Variable", system-ui, sans-serif;
 
   --color-yellow: #e3f55a;
   --color-bg: #0a0a0a;

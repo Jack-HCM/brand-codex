@@ -12,6 +12,9 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="h-full">
+      <head>
+        <link rel="stylesheet" href="https://use.typekit.net/zrw2efx.css" />
+      </head>
       <body className="min-h-full">{children}</body>
     </html>
   );
